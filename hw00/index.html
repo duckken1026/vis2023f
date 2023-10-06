@@ -19,6 +19,11 @@
     font-family: 'Noto Serif JP', serif;
   }
 
+  @font-face {
+  font-family: naikaifont;
+  src: url(https://cdn.jsdelivr.net/gh/max32002/naikaifont@1.0/webfont/NaikaiFont-Regular-Lite.woff2) format("woff2");
+  }
+
   .container-fluid {
     width:  90%;
   }
@@ -81,6 +86,18 @@
       animation-name: happy;
       animation-duration: 0.5s;
       animation-iteration-count: infinite;
+  }
+
+  .right{
+    justify-content: flex-end;
+    display: inline-flex;
+    flex: 1;
+    margin-right: 0%;
+    vertical-align: 300%;
+  }
+  
+  .naikaifont{
+    font-family: "naikaifont";
   }
 
   @keyframes happy {
@@ -198,12 +215,21 @@
   <!-- ---------------------------------------------- -->
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <img class="withborder" src="./image.svg" height="360">
-      <hr>
-      請挑選一張你的生活照(檔案名稱取名為 me.jpg)取代上方的 Hello Kitty，作法如下: <br>
+      <img class="withborder" src="./me.jpg" height="360">
+        <span class="right naikaifont">
+          <hr>
+          <font size="60">
+            呱呱呱!<br>
+            我是阿呱🐥<br>
+            您現在看到的是我的大頭照👦<br>
+          </font>
+          </hr>    
+        </span>
+     
+      <!--請挑選一張你的生活照(檔案名稱取名為 me.jpg)取代上方的 Hello Kitty，作法如下: <br>
       1. 上傳到你的生活照到 hw00 檔案夾 https://github.com/你的帳號/vis2023f/hw00/ <br>
       2. 修改 /hw00/index.html 中的第201行，把 src="./image.svg" 修改為 src="./me.jpg"。<br>
-      3. 前往 https://github.com/你的帳號/vis2023f/ 檢查是否能夠正常顯示。<br>
+      3. 前往 https://github.com/你的帳號/vis2023f/ 檢查是否能夠正常顯示。<br>-->
     </div>
   </div>
 

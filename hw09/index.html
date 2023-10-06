@@ -154,6 +154,48 @@
     to { background-position:20px 100%; }
   }
   /* 波浪 */
+
+  .left {
+    justify-content: flex-start;
+    display: flex;
+  }
+
+  .right{
+    justify-content: flex-end;
+    display: flex;
+    flex: 1;
+    margin-right: 1%;
+  }
+
+  img:hover {
+      
+      animation-name: happy;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+  }
+
+  @keyframes happy {
+      0% {
+          transform: translateY(0px);
+      }
+
+      25% {
+          transform: translateY(-15px);
+      }
+
+      50% {
+          transform: translateY(0px);
+      }
+
+      75% {
+          transform: translateY(-5px);
+      }
+
+      100% {
+          transform: translateY(0px);
+      }
+  }
+
 </style>
 </head>
 <body>
@@ -171,17 +213,20 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 09</h1>
+      <h1 class="left">作業 09 <span class="right"><img src="../home.svg" width="50" height="60" onclick="location.href= '../hw00/index.html'"></span></h1>
+      
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/vis2023f/hw<span style="color:red;">09</span>/src/ 檔案夾。
+      打開src資料夾
+      <input type="button" name="back" onclick="location.href='https://github.com/Wenshin1109/ct2023s/tree/main/hw04/src'" value="按我٩(｡・ω・｡)و">
     </div>
   </div>
 
+  
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
@@ -201,21 +246,22 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td id='m1'>3</td>
+          <td>Simple baseline - 在場景中加入虛擬解說員</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td id='m2'>5</td>
+          <td>Medium baseline - 虛擬解說員進行解說 </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td>Strong baseline - 加入臉部表情：眨眼、動嘴巴 </td>
         </tr>
       </table>
+
     </div>
   </div>
 
@@ -244,10 +290,7 @@
   d3.select("#myCheckbox1").on("change",update);
   d3.select("#myCheckbox2").on("change",update);
   d3.select("#myCheckbox3").on("change",update);
-  d3.select("#myCheckbox4").on("change",update);
-  d3.select("#myCheckbox5").on("change",update);
-  d3.select("#myCheckbox6").on("change",update);
-  d3.select("#myCheckbox7").on("change",update);
+
 
   update();
   
