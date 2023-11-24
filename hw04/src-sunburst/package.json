@@ -1,0 +1,14 @@
+{
+  "name": "db9587428d4cd689",
+  "main": "db9587428d4cd689@50.js",
+  "version": "50.0.0",
+  "homepage": "https://observablehq.com/d/db9587428d4cd689",
+  "author": {
+    "name": "ducken's Workspace",
+    "url": "https://observablehq.com/@ducken-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
