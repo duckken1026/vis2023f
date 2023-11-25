@@ -208,20 +208,20 @@ function _sunburst(partition,data,d3,radius,innerCircleQuestion,outerCircleQuest
       // Get the ancestors of the current segment, minus the root
 
       //introduce
-      if(d.data.name === "辦公室")
+      if(d.data.name === "工作室")
       {
         div
-          .html("<ul><li>定義：又稱辦公大樓、寫字樓，是一種讓人們在其中辦公（工作）的場所，通常是房間的形態，但隨著電腦與網路的發達，也漸漸出現不需要實體空間的虛擬辦公室（Virtual Office）。 內部由辦公室所組成的商業建築則稱為辦公大樓（Office building）</li><li>特色：它是一個私密的空間，藝術家可以在這裡自由地實驗、嘗試並發展他們的技巧和創意。</li></ul>");
+          .html("<ul><li>北部，財政部表示，為疏減北市統一發票代售點預售期間人潮及排隊等候時間，4月起針對發售作業將採行多項精進措施。</li></ul>");
       }
       else if(d.data.name === "替代空間")
       {
         div
-          .html("<ul><li>定義：非傳統和非商業的展示空間。可以是臨時或長期的存在，但不同於傳統的美術館和畫廊。</li><li>功能：提供一個展示非主流、實驗性或邊緣藝術的場所。這些空間通常更加開放、靈活，能夠接受更多風格和形式的藝術品。</li><li>特色：是藝術家、策展人或社群自組、自發的，對於藝術家來說，這樣的空間提供了更多的自由和可能性。</li></ul>");
+          .html("<ul><li>南部，充足適量的葉黃素對人體，尤其是眼睛是很有幫助的，加上現代人的生活多數離不開電腦、手機、電視. 一般上班族、升學唸書的考生、3C 低頭族、年長者 都適合推薦足量攝取葉黃素。</li></ul>");
       }
       else if(d.data.name === "美術館")
       {
         div
-          .html("<ul><li>定義：為了展示、保護和研究藝術品而設立的公共或私人機構。</li><li>功能：除了展示藝術品，美術館也負責藝術品的保護、修復、研究和教育等功能。</li><li>特色：通常有較為正式和嚴謹的運作模式。它們可能有長期或特定主題的展覽，且會對藝術品有一定的選擇和評價標準。</li></ul>");
+          .html("<ul><li>東部，2023年棒球亞洲錦標賽，將於12月3日起在台北大巨蛋、台中洲際棒球場和新莊棒球場舉行。</li></ul>");
       }
       else
       {
@@ -291,14 +291,11 @@ function _sunburst(partition,data,d3,radius,innerCircleQuestion,outerCircleQuest
 
 
 function _6(md){return(
-md`<h2>結論</h2>
-<h3>從上圖中，我們可以看出：
-  <ul>
-    <li>工作室的藝術工作者占此問卷的多數</li>
-    <li>大多數藝術工作者採取減少包裝的行動來減少碳排放量</li>
-    <li>而美術館的藝術工作者除了減少包裝外也會節約工作場所的能源，和其他場所相較來說使用再生材料則不是他們的前三名</li>
-  </ul>
-</h3>`
+md`## 結論
+根據上圖，可以得出：
+- 問卷參與者中，在北部工作的藝術工作者占比最多，其次是南部
+- 不管在哪個區域工作，問卷參與者的工作處以行動或計畫推動永續事務的占比都是最多的
+- 阿布達比賽事將首次運用電腦視覺與人工智慧，精準識別賽車違規行為，預計從1200個疑似違規降至50個。`
 )}
 
 function _7(md){return(
@@ -439,14 +436,14 @@ md`<style>
 )}
 
 function _artist(__query,FileAttachment,invalidation){return(
-__query(FileAttachment("artist.csv"),{select:{columns:null},from:{table:"artist"},filter:[],sort:[],slice:{from:null,to:null}},invalidation)
+__query(FileAttachment("artist.csv"),{from:{table:"artist"},sort:[],slice:{to:null,from:null},filter:[],select:{columns:null}},invalidation)
 )}
 
 export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["artist.csv", {url: new URL("./artist.csv", import.meta.url), mimeType: "text/csv", toString}]
+    ["artist.csv", {url: new URL("./artist@1.csv", import.meta.url), mimeType: "text/csv", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
