@@ -1,0 +1,14 @@
+{
+  "name": "f305a8c9d0cc05f5",
+  "main": "f305a8c9d0cc05f5@22.js",
+  "version": "22.0.0",
+  "homepage": "https://observablehq.com/d/f305a8c9d0cc05f5",
+  "author": {
+    "name": "ducken's Workspace",
+    "url": "https://observablehq.com/@ducken-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
